@@ -1,0 +1,8 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    class="item"
+    i18n:domain="derico.nomacro">
+
+  <h3 tal:content="python: options.get('title')">Item title</h3>
+  <p>Reprehenderit reprehenderit incididunt et nulla irure minim id occaecat ullamco enim est. Labore labore aute minim exercitation quis sit elit labore minim. Et fugiat fugiat laborum excepteur eiusmod. Esse pariatur minim sit mollit voluptate eu. Esse voluptate ut tempor sunt ea tempor amet ut excepteur eiusmod culpa commodo. Minim do aute proident aliqua exercitation sunt. Ullamco eiusmod quis aute id do eu ipsum.</p>
+
+</div>

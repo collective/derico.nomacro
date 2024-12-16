@@ -4,9 +4,7 @@
 from Products.Five.browser import BrowserView
 from zope.interface import implementer
 from zope.interface import Interface
-
-
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 class ICompositeView(Interface):
@@ -15,10 +13,16 @@ class ICompositeView(Interface):
 
 @implementer(ICompositeView)
 class CompositeView(BrowserView):
-    # If you want to define a template here, please remove the template from
-    # the configure.zcml registration of this view.
-    # template = ViewPageTemplateFile('composite_view.pt')
 
     def __call__(self):
-        # Implement your own actions:
+        self.items = [
+            "Hello World",
+            "Hello Plone",
+            "Hello Classic UI",
+        ]
         return self.index()
+
+    def render_item(self, item):
+        template = ViewPageTemplateFile('item.pt')
+        return template(self, title=item)
+

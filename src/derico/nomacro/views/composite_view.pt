@@ -8,14 +8,6 @@
 
   <metal:custom_title fill-slot="content-title">
     <h1 tal:replace="structure context/@@title" />
-
-    <!-- @@title view template: -->
-    <!--
-    <h1 tal:define="title context/Title" tal:condition="title" tal:content="title">
-      Title or id
-    </h1>
-    -->
-
   </metal:custom_title>
 
   <metal:custom_description fill-slot="content-description">
@@ -25,9 +17,15 @@
   <metal:content-core fill-slot="content-core">
   <metal:block define-macro="content-core">
 
-    <h2>Main content</h2>
-    <!--<div tal:replace="view/my_custom_view_method" />-->
-    <!--<div tal:replace="context/my_custom_field" />-->
+  <h2>Some headline</h2>
+
+  <p>Et exercitation occaecat incididunt cupidatat est nulla ut ullamco. Irure minim in minim ea cupidatat aliqua incididunt laboris proident duis voluptate et Lorem. Nisi qui et reprehenderit ipsum nisi do minim pariatur enim aliqua fugiat officia eiusmod. Magna adipisicing excepteur ut aute quis consequat ullamco nostrud. Reprehenderit laboris adipisicing mollit proident fugiat anim. Qui esse sunt exercitation veniam reprehenderit enim aliquip cupidatat.</p>
+
+  <ul>
+    <li tal:repeat="item python: view.items"
+      tal:content="structure python: view.render_item(item)"></li>
+  </ul>
+
 
   </metal:block>
   </metal:content-core>
