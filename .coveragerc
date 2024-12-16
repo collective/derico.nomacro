@@ -1,0 +1,6 @@
+[report]
+include =
+    src/derico/*
+omit =
+    */test*
+    */upgrades/*

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="derico.nomacro"
+      interface="derico.nomacro.interfaces.IDericoNomacroLayer"
+      />
+</layers>
